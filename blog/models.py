@@ -6,7 +6,7 @@ class Post(models.Model):
 	titre = models.CharField(max_length = 200)
 	texte = models.TextField()
 	create_date = models.DateTimeField(default = timezone.now)
-	published_date = models.DateTimeFied(blank = True, null = True)
+	published_date = models.DateTimeField(blank = True, null = True)
 	def publish(self):
 		self.published_date = timezone.now()
 		self.save()
